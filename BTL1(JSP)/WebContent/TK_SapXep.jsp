@@ -47,7 +47,7 @@ body {
          
           <div class="btn-group btn-group-justified" role="group" aria-label="abc">
               <div class="btn-group" role="group">
-                <a href="TK.jsp"> <button   type="button"  class="btn btn-default" >Nhập/Xem thông tin</button></a>
+                <a href="TK_NhapTTGV.jsp"> <button   type="button"  class="btn btn-default" >Nhập/Xem thông tin</button></a>
               </div>
               <div class="btn-group" role="group">
                  <a href="TK_SapXep.jsp"> <button type="button" class="btn btn-info">Sắp xếp hội đồng</button></a>
@@ -139,7 +139,7 @@ body {
                     <td> </td>
                     <td> </td>
                     <td> </td>
-                    <td>1.</td>
+                    <td>5.</td>
                   </tr>
                 </tbody>
               </table>

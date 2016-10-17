@@ -158,6 +158,7 @@ body {
                                     <tr>
                                         <th>Tên Đề Tài</th>
                                         <th>Chuyên Ngành</th>
+                                         <th>Họ tên SV</th>
                                         <th>Mã Sinh Viên</th>
                                         <th>Giáo Viên Hướng Dẫn</th>
                                        
@@ -167,6 +168,7 @@ body {
                                     <tr>
                                         <td>Kết nối các máy tính</td>
                                         <td>Mạng máy tính</td>
+                                        <td>Võ A</td>
                                         <td>14110233-14110003</td>
                                         <td>Nguyễn Văn A</td>
                                     </tr>

@@ -96,7 +96,7 @@ body {
                         Nhớ mật khẩu</label>
                   </div>
                   <div class="col-md-5 col-md-offset-5">
-	                 <button type="submit" class="btn btn-default" ng-disabled="userForm.$invalid"><a href="TK.jsp" >Đăng nhập</a></button>
+	                 <button type="submit" class="btn btn-default" ng-disabled="userForm.$invalid"><a href="TK_SapXep.jsp" >Đăng nhập</a></button>
 	                 <button type="submit" class="btn btn-default" ng-disabled="userForm.$invalid"><a href="TrangChu.jsp" >Hủy</a></button>
 	               
                </div>

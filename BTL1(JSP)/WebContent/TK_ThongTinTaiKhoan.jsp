@@ -37,7 +37,7 @@ body {
                           <p>Tên người dùng: <h>Võ Thị Thanh Vi</h></p>
                           <p>Mật khẩu:<h>********</h></p>
                           <p>Email:<h>vttv@gmail.com</h></p>
-                          <p>Loại người dùng:<h>giảng viên</h></p>
+                          <p>Loại người dùng:<h>Trưởng khoa/ Trưởng bộ môn</h></p>
 
                       </div>
                      
@@ -57,7 +57,7 @@ body {
 
                   </div>
                   <div class="col-md-3 col-md-offset-1">
-                           <a href="TK.jsp" type="submit"><button class="btn btn-default">Trở về</button></a>
+                           <a href="TK_SapXep.jsp" type="submit"><button class="btn btn-default">Trở về</button></a>
 
                   </div>
 

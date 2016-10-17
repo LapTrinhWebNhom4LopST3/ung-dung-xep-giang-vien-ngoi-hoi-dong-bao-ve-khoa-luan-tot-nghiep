@@ -1,25 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<html>
 <head>
-
-           <script src="js/angular.min.js"></script>
-    
-   <title>Trang Admin Xem/Nhập Thông Tin Giảng Viên</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link rel="icon" href="img/logo.PNG" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible"content="IE=edge">
+<link rel="icon" href="img/logo.PNG" type="image/x-icon" />
     <link rel="shortcut icon" href="img/logo.PNG"/>
-    
- <meta http-equiv="X-UA-Compatible"content="IE=edge">
-    <link rel="stylesheet" href="js//bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <style>
         body    { padding-top:30px; }
     </style>
     
     <!-- JS ===================== -->
     <!-- load angular -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js">
     <script src="app.js"></script>
 <style>
 img {
@@ -34,7 +29,7 @@ body {
 </style>
 </head>
 <body>
-    <jsp:include page= "HeaderAD.jsp"></jsp:include>
+<jsp:include page= "HeaderTK.jsp"></jsp:include>
  <nav class="navbar navbar col-md-offset-0">
         <div class="container">
           <div class="navbar-header">
@@ -45,25 +40,25 @@ body {
               <span class="icon-bar"></span>
             </button>
           </div>
-                 <a href="ADprofile.jsp" class="btn btn-success btn-lg">
+         <a href="TK_SapXep.jsp" class="btn btn-success btn-lg">
     <span class="glyphicon glyphicon-hand-left"></span> Trở về
-  </a><br><br>
+  </a>
         <div class="btn-group btn-group-justified" role="group" aria-label="abc">
   <div class="btn-group" role="group">
-         <a href="Ad_Xem_NhapTT.jsp"> <button   type="button"  class="btn btn-info" >Nhập thông tin giảng viên</button></a>
+          <a href="TK_NhapTTGV.jsp"><button   type="button"  class="btn btn-info" >Nhập thông tin giảng viên</button></a>
   </div>
   <div class="btn-group" role="group">
-    <a href="AD_NhapTTDeTai.jsp"><button type="button" class="btn btn-default">Nhập thông tin đề tài</button></a>
+   <a href="TK_NhapTTDeTai.jsp"> <button type="button" class="btn btn-default">nhập thông tin đề tài</button></a>
   </div>
   <div class="btn-group" role="group">
-    <a href="AD_NhapTTPhong.jsp"><button type="button" class="btn btn-default">Nhập thông tin phòng</button></a>
+   <a href="TK_NhapTTPhong.jsp"> <button type="button" class="btn btn-default">nhập thông tin phòng</button></a>
   </div>
 </div>
 <br><br><br>
 
 <html ng-app="myApp">
   <head>  
-    <title>Ad_nhapthongtingv</title>  
+    <title>TK_nhapthongtin</title>  
     <style>body{font-family:"Time new roman";background-color:#E2E2DC}</style>
   <style>
       .IDname.ng-valid {
@@ -96,7 +91,7 @@ body {
       }
  
     </style>
-     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
      <link rel="stylesheet" href="app.css">
   </head>
   <body ng-app="myApp">
@@ -188,7 +183,7 @@ body {
           </div>
       </div>
        
-      <script src="js/angular.min.js">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js">
       </script>  
       <script>
           angular.module('myApp', [])
@@ -250,6 +245,5 @@ body {
  
       }]);
   </script>
-
 </body>
 </html>

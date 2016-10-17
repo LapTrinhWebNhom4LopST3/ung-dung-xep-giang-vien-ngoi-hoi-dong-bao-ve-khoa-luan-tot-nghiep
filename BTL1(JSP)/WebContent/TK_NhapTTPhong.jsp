@@ -1,25 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<html>
 <head>
-
-           <script src="js/angular.min.js"></script>
-    
-   <title>Trang Admin Xem/Nhập Thông Tin Giảng Viên</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link rel="icon" href="img/logo.PNG" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible"content="IE=edge">
+<link rel="icon" href="img/logo.PNG" type="image/x-icon" />
     <link rel="shortcut icon" href="img/logo.PNG"/>
-    
- <meta http-equiv="X-UA-Compatible"content="IE=edge">
-    <link rel="stylesheet" href="js//bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <style>
         body    { padding-top:30px; }
     </style>
     
     <!-- JS ===================== -->
     <!-- load angular -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js">
     <script src="app.js"></script>
 <style>
 img {
@@ -34,7 +29,7 @@ body {
 </style>
 </head>
 <body>
-    <jsp:include page= "HeaderAD.jsp"></jsp:include>
+<jsp:include page= "HeaderTK.jsp"></jsp:include>
  <nav class="navbar navbar col-md-offset-0">
         <div class="container">
           <div class="navbar-header">
@@ -45,73 +40,82 @@ body {
               <span class="icon-bar"></span>
             </button>
           </div>
-                 <a href="ADprofile.jsp" class="btn btn-success btn-lg">
+               <a href="TK_SapXep.jsp" class="btn btn-success btn-lg">
     <span class="glyphicon glyphicon-hand-left"></span> Trở về
-  </a><br><br>
+  </a>
         <div class="btn-group btn-group-justified" role="group" aria-label="abc">
   <div class="btn-group" role="group">
-         <a href="Ad_Xem_NhapTT.jsp"> <button   type="button"  class="btn btn-info" >Nhập thông tin giảng viên</button></a>
+          <a href="TK_NhapTTGV.jsp"><button   type="button"  class="btn btn-default " >Nhập thông tin giảng viên</button></a>
   </div>
   <div class="btn-group" role="group">
-    <a href="AD_NhapTTDeTai.jsp"><button type="button" class="btn btn-default">Nhập thông tin đề tài</button></a>
+    <a href="TK_NhapTTDeTai.jsp"><button type="button" class="btn btn-default  ">nhập thông tin đề tài</button></a>
   </div>
   <div class="btn-group" role="group">
-    <a href="AD_NhapTTPhong.jsp"><button type="button" class="btn btn-default">Nhập thông tin phòng</button></a>
+    <a href="TK_NhapTTPhong.jsp"><button type="button" class="btn btn-info ">nhập thông tin phòng</button></a>
   </div>
 </div>
 <br><br><br>
 
 <html ng-app="myApp">
   <head>  
-    <title>Ad_nhapthongtingv</title>  
+    <title>TK_nhapthongtinphong</title>  
     <style>body{font-family:"Time new roman";background-color:#E2E2DC}</style>
   <style>
-      .IDname.ng-valid {
+      .IDroom.ng-valid {
           background-color: lightgreen;
       }
-      .IDname.ng-dirty.ng-invalid-required {
+      .IDroom.ng-dirty.ng-invalid-required {
           background-color: red;
       }
-      .IDname.ng-dirty.ng-invalid-minlength {
+      .IDroom.ng-dirty.ng-invalid-minlength {
           background-color: yellow;
       }
 
-    .username.ng-valid {
+    .date.ng-valid {
           background-color: lightgreen;
       }
-      .username.ng-dirty.ng-invalid-required {
+      .date.ng-dirty.ng-invalid-required {
           background-color: red;
       }
-      .username.ng-dirty.ng-invalid-minlength {
+      .date.ng-dirty.ng-invalid-minlength {
           background-color: yellow;
       }
-       .work.ng-valid {
+       .start.ng-valid {
           background-color: lightgreen;
       }
-      .work.ng-dirty.ng-invalid-required {
+      .start.ng-dirty.ng-invalid-required {
           background-color: red;
       }
-      .work.ng-dirty.ng-invalid-minlength {
+      .start.ng-dirty.ng-invalid-minlength {
+          background-color: yellow;
+      }
+         .finish.ng-valid {
+          background-color: lightgreen;
+      }
+      .finish.ng-dirty.ng-invalid-required {
+          background-color: red;
+      }
+      .finish.ng-dirty.ng-invalid-minlength {
           background-color: yellow;
       }
  
     </style>
-     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
      <link rel="stylesheet" href="app.css">
   </head>
   <body ng-app="myApp">
       <div class="generic-container" ng-controller="AppController as ctrl">
           <div class="panel panel-default">
-              <div class="panel-heading"><span class="lead">nhập thông tin giảng viên </span></div><br>
+              <div class="panel-heading"><span class="lead">Nhập thông tin phòng </span></div><br>
               <div class="formcontainer">
                   <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
                       <input type="hidden" ng-model="ctrl.user.STT" />
 
                       <div class="row">
                           <div class="form-group col-md-12">
-                              <label class="col-md-4 control-lable" for="ID">Mã giảng viên</label>
+                              <label class="col-md-4 control-lable" for="ID">Mã phòng</label>
                               <div class="col-md-7">
-                                  <input type="text" ng-model="ctrl.user.IDname" id="ID" class="IDname form-control input-sm" placeholder="Nhập mã giảng viên" required ng-minlength="3"/>
+                                  <input type="text" ng-model="ctrl.user.IDroom" id="ID" class="IDroom form-control input-sm" placeholder="Nhập mã phòng" required ng-minlength="3"/>
                                   <div class="has-error" ng-show="myForm.$dirty">
                                       <span ng-show="myForm.ID.$error.required">This is a required field</span>
                                       <span ng-show="myForm.ID.$error.minlength">Minimum length required is 3</span>
@@ -124,9 +128,9 @@ body {
                        
                      <div class="row">
                           <div class="form-group col-md-12">
-                              <label class="col-md-4 control-lable" for="uname">Tên giảng viên</label>
+                              <label class="col-md-4 control-lable" for="uname">ngày</label>
                               <div class="col-md-7">
-                                  <input type="text" ng-model="ctrl.user.username" id="uname" class="username form-control input-sm" placeholder="Nhập tên giảng viên" required ng-minlength="3"/>
+                                  <input type="text" ng-model="ctrl.user.date" id="uname" class="date form-control input-sm" placeholder="dd-mm-yyyy" ng-pattern="/^(0?[1-9]|[12][0-9]|3[01])-(0?[1-9]|1[012])-((19[0-9]{2})|(20[0-1]{1}[0-4]{1}))$/">
                                   <div class="has-error" ng-show="myForm.$dirty">
                                       <span ng-show="myForm.uname.$error.required">This is a required field</span>
                                       <span ng-show="myForm.uname.$error.minlength">Minimum length required is 3</span>
@@ -138,9 +142,9 @@ body {
  
                      <div class="row">
                           <div class="form-group col-md-12">
-                              <label class="col-md-4 control-lable" for="cn">Chuyên ngành</label>
+                              <label class="col-md-4 control-lable" for="cn">từ giờ</label>
                               <div class="col-md-7">
-                                  <input type="text" ng-model="ctrl.user.work" id="cn" class="work form-control input-sm" placeholder="Nhập chuyên ngành" required ng-minlength="3"/>
+                                  <input type="text" ng-model="ctrl.user.start" id="cn" class="start form-control input-sm" placeholder="Nhập giờ bắt đầu" required ng-minlength="1"/>
                                   <div class="has-error" ng-show="myForm.$dirty">
                                       <span ng-show="myForm.cn.$error.required">This is a required field</span>
                                       <span ng-show="myForm.cn.$error.minlength">Minimum length required is 3</span>
@@ -149,6 +153,21 @@ body {
                               </div>
                           </div>
                       </div>
+
+                      <div class="row">
+                          <div class="form-group col-md-12">
+                              <label class="col-md-4 control-lable" for="cn">đến giờ</label>
+                              <div class="col-md-7">
+                                  <input type="text" ng-model="ctrl.user.finish" id="cn" class="finish form-control input-sm" placeholder="Nhập giờ kết thúc" required ng-minlength="1"/>
+                                  <div class="has-error" ng-show="myForm.$dirty">
+                                      <span ng-show="myForm.cn.$error.required">This is a required field</span>
+                                      <span ng-show="myForm.cn.$error.minlength">Minimum length required is 3</span>
+                                      <span ng-show="myForm.cn.$invalid">This field is invalid </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+ 
  
                       <div class="row">
                             <div class="col-md-offset-10">
@@ -167,18 +186,20 @@ body {
                       <thead>
                           <tr>
                                <th>Số thứ tự</th>
-                              <th>Mã giảng viên</th>
-                              <th>Tên giảng viên</th>
-                              <th>Chuyên ngành</th>
+                              <th>Mã phòng</th>
+                              <th>ngày</th>
+                              <th>thời gian bắt dầu(giờ)</th>
+                              <th>thời gian kết thúc(giờ)</th>
                               <th width="100">
                           </tr>
                       </thead>
                       <tbody>
                           <tr ng-repeat="u in ctrl.users">
                               <td><span ng-bind="u.STT"></span></td>
-                              <td><span ng-bind="u.IDname"></span></td>
-                              <td><span ng-bind="u.username"></span></td>
-                              <td><span ng-bind="u.work"></span></td>
+                              <td><span ng-bind="u.IDroom"></span></td>
+                              <td><span ng-bind="u.date"></span></td>
+                              <td><span ng-bind="u.start"></span></td>
+                              <td><span ng-bind="u.finish"></span></td>
                               <td>
                               <button type="button" ng-click="ctrl.edit(u.STT)" class="btn btn-success custom-width">Edit</button>  <button type="button" ng-click="ctrl.remove(u.STT)" class="btn btn-danger custom-width">Remove</button>
                           </tr>
@@ -188,19 +209,19 @@ body {
           </div>
       </div>
        
-      <script src="js/angular.min.js">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js">
       </script>  
       <script>
           angular.module('myApp', [])
           .controller('AppController', ['$scope', function($scope) {
               var self = this;
-              self.user={STT:null,IDname:'',username:'',work:''};
-              self.STT = 4;
+              self.user={STT:null,IDroom:'',date:'',start:'',finish:''};
+              self.STT = 5;
                
               self.users = [// In future posts, we will get it from server using service
-                      {STT:1, IDname: '1411000', username: 'A', work: 'CNPM'},
-                      {STT:2, IDname: '1411001', username: 'B', work: 'MMT'},
-                      {STT:3, IDname: '1411002', username: 'C', work: 'HDH'}
+                      {STT:1, IDroom: 'A111', date: '26-10-2016',start:'7',finish:'9'},
+                      {STT:2, IDroom: 'A112', date: '26-10-2016',start:'7',finish:'9'},
+                      {STT:3, IDroom: 'A342', date: '26-10-2016',start:'7',finish:'9'},
               ];
                
               self.submit = function() {
@@ -244,12 +265,11 @@ body {
               }
                
               self.reset = function(){
-                  self.user={STT:null,IDname:'',username:'',work:''};
+                  self.user={STT:null,IDroom:'',date:'',work:'',start:'',finish:''};
                   $scope.myForm.$setPristine(); //reset Form
               }
  
       }]);
   </script>
-
 </body>
 </html>

@@ -24,7 +24,7 @@ body {
 </style>
 </head>
 <body>
-    <jsp:include page= "HeaderGV.jsp"></jsp:include>
+    <jsp:include page= "HeaderSV.jsp"></jsp:include>
                 
   <div class="col-md-6 col-md-offset-3  ">
     <div class="row">

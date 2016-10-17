@@ -33,50 +33,31 @@ img {
                 </div>   
           </div>    
       </div>                
-          <div class="search col-md-6 col-sm-6 col-xs-12 text-right">
-            <form method="get" action="#">
-              <head>
-              <style>
-         body {
-                color:blue;
-              }
-              </style>
-              <head>
-              <br><br><br><br>
-              <a href="TrangChu.jsp"><button type="button" class="btn btn-brimary">
-                          <span class="glyphicon glyphicon-log-in"></span> Đăng Xuất
-                          </button></a>
-              <input type="text" placeholder="Nhập từ khóa tìm kiếm" id="q" name="q" value="">
-              <button type="button" class="btn btn-brimary">Tìm kiếm
-      <span class="glyphicon glyphicon-search"></span>
-            </form>
+        <div class="container">
+      <div class="header-menu" style="padding-top: 90px;padding-left: 10px">
+          <div class="row">
+              <div class="clearfix"></div>
+              <div class="header-menu">
+                    <nav class="navbar navbar-inverse">
+                     <div class="container-blue">
+                        <div class="navbar-header">
+                         <a class="navbar-brand" href="SV.html"><h style="color:blue">Trang chủ</a>
+                       </div>
+                    <ul class="nav navbar-nav navbar-right">
+                       <li><a href="TrangChu.jsp"><span class="glyphicon glyphicon-log-out"></span><h style="color:blue">Đăng xuất</a></li>
+                    </ul>
+                </div>
+             </nav>
+  
+              </div>
           </div>
+      </div>    
+  </div>
           <div class="clearfix"></div>
           <br>
      </div>
     
-        <style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:white;
-}
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    padding: 14px;
-}
-</style>
-
-<ul>
-  <li></li><h4><span class="glyphicon glyphicon-home" style="font-style: 40px;height: 30px"></span>Trang Chủ
-</h4></ul>
        
      <br>
 
